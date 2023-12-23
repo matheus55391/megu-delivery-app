@@ -1,5 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+import { AntDesign,Feather } from '@expo/vector-icons';
+
 
 const StoreCard = () => {
     return (
@@ -14,11 +16,11 @@ const StoreCard = () => {
             <View style={styles.textContainer}>
                 <Text style={styles.storeName}>Gato-Lanches</Text>
                 <View style={styles.ratingContainer}>
-                    <Text>⭐</Text>
+                    <Text> <AntDesign name="star" size={20} color="yellow" /> </Text>
                     <Text style={styles.ratingText}>4 (4.4k reviews) . Fast Food</Text>
                 </View>
                 <View style={styles.detailsContainer}>
-                    <Text style={styles.icon}>Icon</Text>
+                    <Text style={styles.icon}> <Feather name="map-pin" size={18} color="black" /> </Text>
                     <Text style={styles.address}>Endereco</Text>
                 </View>
             </View>
