@@ -3,7 +3,7 @@ import { useColorScheme } from 'react-native';
 import { Ionicons } from "@expo/vector-icons";
 
 import Colors from '../../constants/Colors';
-import { useThemeColorStore } from '../../store/ThemeColorStore';
+import { useThemeColorStore } from '../../hooks/ThemeColorStore';
 
 export default function TabLayout() {
   const colorScheme = useThemeColorStore(state => state.themeColor);
