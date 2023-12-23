@@ -1,6 +1,4 @@
-import { StyleSheet,View,Text } from 'react-native';
-
-
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import StoreCard from '../../components/cards/StoreCard';
 import React from 'react';
 
@@ -8,7 +6,15 @@ export default function HomePage() {
   return (
     <View style={styles.container}>
       <Text>HomePage</Text>
-      <StoreCard></StoreCard>
+      <ScrollView style={styles.cardContainer} horizontal showsHorizontalScrollIndicator={false}>
+        <StoreCard />
+        <StoreCard />
+        <StoreCard />
+        <StoreCard />
+        <StoreCard />
+        <StoreCard />
+        <StoreCard />
+      </ScrollView>
     </View>
   );
 }
@@ -27,5 +33,9 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: '80%',
+  },
+  cardContainer: {
+    flexDirection: 'row', // Alinha os componentes horizontalmente
+    maxHeight: 250,
   },
 });
