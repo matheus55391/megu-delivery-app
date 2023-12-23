@@ -1,11 +1,14 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet,View,Text } from 'react-native';
 
-import { Text, View } from '../../components/Themed';
+
+import StoreCard from '../../components/cards/StoreCard';
+import React from 'react';
 
 export default function HomePage() {
   return (
     <View style={styles.container}>
       <Text>HomePage</Text>
+      <StoreCard></StoreCard>
     </View>
   );
 }
