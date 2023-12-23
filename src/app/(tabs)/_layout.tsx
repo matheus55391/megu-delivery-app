@@ -3,14 +3,15 @@ import { useColorScheme } from 'react-native';
 import { Ionicons } from "@expo/vector-icons";
 
 import Colors from '../../constants/Colors';
+import { useThemeColorStore } from '../../store/ThemeColorStore';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const colorScheme = useThemeColorStore(state => state.themeColor);
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: Colors[colorScheme].tint,
         headerShown: false,
       }}
     >
