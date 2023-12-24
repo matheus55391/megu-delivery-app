@@ -1,6 +1,7 @@
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import StoreCard from '../../components/cards/StoreCard';
 import React from 'react';
+import StoreRoundCard from '../../components/cards/StoreRoundCard';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,14 @@ export default function HomePage() {
         <StoreCard />
         <StoreCard />
         <StoreCard />
+      </ScrollView>
+      <ScrollView style={styles.cardContainer} horizontal showsHorizontalScrollIndicator={false}>
+        <StoreRoundCard label='Pizza'/>
+        <StoreRoundCard label='Pizaa'/>
+        <StoreRoundCard label='Pizza'/>
+        <StoreRoundCard label='Pizza'/>
+        <StoreRoundCard label='Pizza'/>
+        <StoreRoundCard label='Pizza'/>
       </ScrollView>
     </View>
   );
